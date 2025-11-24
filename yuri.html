@@ -1,96 +1,106 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>El Camino del Agua</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>El Camino del Agua: Explorando la Esencia de la Vida</title>
     <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #F0F8FF; /* Azul Alicia */
-            color: #333;
-        }
-
-        .header {
-            background-color: #ADD8E6; /* Azul claro */
-            color: white;
-            text-align: center;
-            padding: 20px;
-        }
-
-        .header h1 {
-            transition: transform 0.3s ease; /* Transición suave */
-        }
-
-        .header h1:hover {
-            transform: translateX(10px); /* Se mueve 10px a la derecha al pasar el ratón */
-            cursor: pointer; /* Cambia el cursor a una mano */
-        }
-
-        .container {
-            display: flex;
-            margin: 20px;
-        }
-
-        .sidebar {
-            width: 25%;
-            padding: 20px;
-            background-color: #E6F7FF; /* Azul muy claro */
-        }
-
-        .main-content {
-            width: 75%;
-            padding: 20px;
-        }
-
-        ul {
-            list-style: none;
-            padding: 0;
-        }
-
-        li {
-            margin-bottom: 10px;
-        }
-
-        a {
-            text-decoration: none;
-            color: #007BFF; /* Azul */
-        }
-
-        a:hover {
-            text-decoration: underline;
-        }
+        :root { --accent: #4682B4; /* Azul Acero */ }
+        body { font-family: 'Arial', sans-serif; margin: 0; background: #E0FFFF; color: #333; line-height: 1.6; }
+        .layout { display: grid; grid-template-columns: 250px 1fr 200px; gap: 20px; max-width: 1200px; margin: 30px auto; padding: 0 20px; }
+        @media (max-width: 1000px) { .layout { grid-template-columns: 1fr; } }
+        header { grid-column: 1 / -1; background: var(--accent); color: #fff; padding: 20px; border-radius: 10px; text-align: center; cursor: pointer; /* Indicador de clic */ }
+        header h1 { margin: 0; transition: transform 0.3s ease, color 0.3s ease; /* Transiciones suaves */ }
+        header:active h1 { transform: scale(1.1); color: #fff; /* Efecto de marea */ }
+        aside { background: #fff; padding: 15px; border-radius: 10px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.08); }
+        main { background: #fff; padding: 20px; border-radius: 10px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.08); }
+        img { max-width: 100%; border-radius: 8px; display: block; margin: 15px auto; }
+        table { width: 100%; border-collapse: collapse; margin-top: 25px; }
+        th, td { border: 1px solid #ddd; padding: 12px; text-align: left; }
+        th { background-color: #E0E0E0; font-weight: bold; }
+        footer { grid-column: 1 / -1; text-align: center; margin-top: 20px; color: #777; font-size: 14px; }
+        h2 { color: var(--accent); margin-top: 30px; border-bottom: 2px solid var(--accent); padding-bottom: 5px; }
+        h3 { color: #555; margin-top: 20px; }
+        nav a { display: block; padding: 8px; margin-bottom: 5px; background-color: #f2f2f2; border-radius: 5px; text-decoration: none; color: #333; transition: background-color 0.3s; }
+        nav a:hover { background-color: #ddd; }
     </style>
 </head>
 <body>
-    <div class="header">
-        <h1>El Camino del Agua</h1>
-    </div>
-
-    <div class="container">
-        <div class="sidebar">
-            <h2>Contenido</h2>
+    <div class="layout">
+        <header>
+            <h1>El Camino del Agua</h1>
+        </header>
+        <aside aria-label="Información Adicional">
+            <h3>Contenido</h3>
+            <nav>
+                <a href="#introduccion">Introducción</a>
+                <a href="#ciclo">El Ciclo del Agua</a>
+                <a href="#importancia">Importancia del Agua</a>
+                <a href="#conservacion">Conservación del Agua</a>
+                <a href="#ecosistemas">Ecosistemas Acuáticos</a>
+            </nav>
+            <hr>
+            <p style="font-size:14px;color:#666">Explora las profundidades del agua y su significado en nuestras vidas.</p>
+        </aside>
+        <main>
+            <section id="introduccion">
+                <h2>Introducción</h2>
+                <p>El agua, fuente de vida, recorre un camino fascinante a través de nuestro planeta. Descubre su importancia vital y cómo influye en cada aspecto de la existencia.</p>
+            </section>
+            <section id="ciclo">
+                <h2>El Ciclo del Agua</h2>
+                <p>Desde la evaporación hasta la precipitación, el ciclo del agua es un proceso continuo que sustenta la vida en la Tierra.</p>
+                <h3>Etapas del Ciclo:</h3>
+                <ul>
+                    <li>Evaporación: El agua se transforma en vapor y asciende a la atmósfera.</li>
+                    <li>Condensación: El vapor se enfría y forma nubes.</li>
+                    <li>Precipitación: El agua regresa a la Tierra en forma de lluvia, nieve o granizo.</li>
+                </ul>
+            </section>
+            <section id="importancia">
+                <h2>Importancia del Agua</h2>
+                <p>El agua es esencial para la salud, la agricultura, la industria y el equilibrio ecológico. Su conservación es crucial para el futuro.</p>
+                <h3>Beneficios del Agua:</h3>
+                <ul>
+                    <li>Salud: Mantiene nuestro cuerpo hidratado y funcionando correctamente.</li>
+                    <li>Agricultura: Permite el cultivo de alimentos para alimentar a la población mundial.</li>
+                    <li>Industria: Utilizada en numerosos procesos de fabricación y producción.</li>
+                </ul>
+            </section>
+            <section id="conservacion">
+                <h2>Conservación del Agua</h2>
+                <p>Pequeñas acciones pueden marcar una gran diferencia en la conservación del agua. Aprende cómo puedes contribuir a proteger este recurso vital.</p>
+                <h3>Consejos para Conservar el Agua:</h3>
+                <ul>
+                    <li>Cierra el grifo mientras te cepillas los dientes.</li>
+                    <li>Repara las fugas de agua en tu hogar.</li>
+                    <li>Utiliza electrodomésticos eficientes en el consumo de agua.</li>
+                </ul>
+            </section>
+            <section id="ecosistemas">
+                <h2>Ecosistemas Acuáticos</h2>
+                <p>Los ríos, lagos, océanos y humedales albergan una increíble diversidad de vida y desempeñan un papel fundamental en el equilibrio ecológico.</p>
+                <h3>Tipos de Ecosistemas:</h3>
+                <ul>
+                    <li>Ríos: Corrientes de agua dulce que fluyen hacia el mar.</li>
+                    <li>Lagos: Grandes masas de agua dulce rodeadas de tierra.</li>
+                    <li>Océanos: Extensas masas de agua salada que cubren la mayor parte de la Tierra.</li>
+                </ul>
+            </section>
+        </main>
+        <aside aria-label="Organizaciones y Recursos">
+            <h3>Organizaciones y Recursos</h3>
             <ul>
-                <li><a href="#">Introducción</a></li>
-                <li><a href="#">Ciclo del Agua</a></li>
-                <li><a href="#">Importancia del Agua</a></li>
-                <li><a href="#">Conservación del Agua</a></li>
-                <li><a href="#">Agua y Salud</a></li>
+                <li><a href="https://www.unesco.org/es" target="_blank">UNESCO (Agua)</a></li>
+                <li><a href="https://www.worldwildlife.org/" target="_blank">World Wildlife Fund</a></li>
+                <li><a href="https://www.greenpeace.org/mexico/" target="_blank">Greenpeace México</a></li>
             </ul>
-        </div>
-
-        <div class="main-content">
-            <h2>Introducción</h2>
-            <p>
-                El agua es esencial para la vida en la Tierra. Su camino a través de los ecosistemas es fundamental para mantener el equilibrio natural.
-            </p>
-            <h2>Ciclo del Agua</h2>
-            <p>
-                El ciclo del agua describe cómo el agua se mueve continuamente en la Tierra y la atmósfera.
-            </p>
-        </div>
+            <hr>
+            <p style="font-size:14px;color:#666">Conéctate con organizaciones dedicadas a la protección del agua.</p>
+        </aside>
+        <footer>
+            <p>© 2025 El Camino del Agua: Explorando la Esencia de la Vida</p>
+        </footer>
     </div>
 </body>
 </html>
