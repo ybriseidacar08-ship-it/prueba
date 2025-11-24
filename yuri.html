@@ -9,7 +9,7 @@
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
-            background-color: #E0FFFF; /* Azul aguamarina claro */
+            background-color: #F0F8FF; /* Azul Alicia */
             color: #333;
         }
 
@@ -18,23 +18,15 @@
             color: white;
             text-align: center;
             padding: 20px;
-            overflow: hidden; /* Para ocultar el desbordamiento del título */
-            white-space: nowrap; /* Evita que el título se divida en varias líneas */
         }
 
         .header h1 {
-            display: inline-block; /* Permite aplicar la animación */
-            padding-left: 100%; /* Empieza fuera de la pantalla */
-            animation: moverTitulo 15s linear infinite; /* Animación */
+            transition: transform 0.3s ease; /* Transición suave */
         }
 
-        @keyframes moverTitulo {
-            0% {
-                transform: translateX(0);
-            }
-            100% {
-                transform: translateX(-100%);
-            }
+        .header h1:hover {
+            transform: translateX(10px); /* Se mueve 10px a la derecha al pasar el ratón */
+            cursor: pointer; /* Cambia el cursor a una mano */
         }
 
         .container {
@@ -45,18 +37,12 @@
         .sidebar {
             width: 25%;
             padding: 20px;
-            background-color: #F0FFFF; /* Azul claro muy suave */
+            background-color: #E6F7FF; /* Azul muy claro */
         }
 
         .main-content {
-            width: 50%;
+            width: 75%;
             padding: 20px;
-        }
-
-        .resources {
-            width: 25%;
-            padding: 20px;
-            background-color: #F0FFFF; /* Azul claro muy suave */
         }
 
         ul {
@@ -104,15 +90,6 @@
             <p>
                 El ciclo del agua describe cómo el agua se mueve continuamente en la Tierra y la atmósfera.
             </p>
-        </div>
-
-        <div class="resources">
-            <h2>Organizaciones</h2>
-            <ul>
-                <li><a href="#">UNESCO</a></li>
-                <li><a href="#">WWF</a></li>
-                <li><a href="#">Greenpeace</a></li>
-            </ul>
         </div>
     </div>
 </body>
