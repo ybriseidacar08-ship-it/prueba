@@ -9,65 +9,133 @@
             font-family: 'Arial', sans-serif;
             margin: 0;
             padding: 0;
-            background: #e0f2f7; /* Fondo celeste muy claro */
-            /*  Puedes usar una imagen de fondo sutil  */
-            /* background-image: url('olas-suaves.jpg'); */
+            background: #ADD8E6; /* Azul cielo */
             background-size: cover;
             background-repeat: no-repeat;
             color: #333;
             line-height: 1.6;
+            overflow-x: hidden; /* Evita la barra de desplazamiento horizontal */
         }
 
         .container {
-            max-width: 800px;
+            max-width: 1200px; /* Aumentar el ancho del contenedor */
             margin: 20px auto;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr); /* Tres columnas iguales */
+            grid-gap: 20px; /* Espacio entre las columnas */
             padding: 20px;
-            background: rgba(255, 255, 255, 0.8); /* Fondo blanco semi-transparente */
+            background: rgba(255, 255, 255, 0.7); /* Fondo blanco semi-transparente */
             border-radius: 8px;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            animation: fadeIn 1s ease-out; /* Animación de entrada */
         }
+
+        .section {
+            padding: 20px;
+            border-radius: 8px;
+            background: rgba(255, 255, 255, 0.8); /* Fondo blanco semi-transparente para cada sección */
+            animation: slideIn 0.5s ease-out forwards; /* Animación de desplazamiento */
+            opacity: 0; /* Inicialmente invisible */
+        }
+
+        /* Animación de desplazamiento */
+        .section:nth-child(1) { animation-delay: 0.2s; }
+        .section:nth-child(2) { animation-delay: 0.4s; }
+        .section:nth-child(3) { animation-delay: 0.6s; }
+
+        @keyframes slideIn {
+            from {
+                transform: translateX(-50px); /* Empieza desplazado hacia la izquierda */
+                opacity: 0;
+            }
+            to {
+                transform: translateX(0); /* Termina en su posición original */
+                opacity: 1;
+            }
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+
 
         h1, h2 {
             color: #0056b3; /* Azul más oscuro para los títulos */
             text-align: center;
+            animation: pulse 2s infinite alternate; /* Animación de pulsación */
         }
+
+        @keyframes pulse {
+            from {
+                transform: scale(1);
+            }
+            to {
+                transform: scale(1.05);
+            }
+        }
+
 
         img {
             max-width: 100%;
             height: auto;
             border-radius: 8px;
-            display: block; /* Centrar la imagen */
-            margin: 20px auto;
+            display: block;
+            margin: 10px auto;
+            transition: transform 0.3s ease; /* Transición suave al pasar el cursor */
         }
+
+        img:hover {
+            transform: scale(1.1); /* Aumentar la imagen al pasar el cursor */
+        }
+
 
         a {
             color: #007bff; /* Azul para los enlaces */
             text-decoration: none;
+            transition: color 0.3s ease; /* Transición suave al pasar el cursor */
         }
 
         a:hover {
             text-decoration: underline;
+            color: #003366; /* Cambiar el color al pasar el cursor */
+        }
+
+
+        .highlight {
+            background-color: #cce5ff; /* Celeste más intenso para resaltar */
+            padding: 5px;
+            border-radius: 4px;
+            font-weight: bold;
         }
     </style>
 </head>
 <body>
     <div class="container">
-        <h1>El Camino del Agua</h1>
-        <p>Esta página explora la importancia vital del agua y su recorrido esencial a través de la naturaleza.</p>
+        <div class="section">
+            <h1>El Camino del Agua</h1>
+            <p>Esta página explora la importancia vital del agua y su recorrido esencial a través de la naturaleza.</p>
+            <img src="imagen-rio.jpg" alt="Paisaje de un río" width="400"> <!-- Nueva imagen -->
+        </div>
 
-        <h2>¿Qué es el Ciclo del Agua?</h2>
-        <p>El ciclo del agua, también conocido como ciclo hidrológico, es el proceso continuo de circulación del agua entre los océanos, la atmósfera y la tierra. Incluye la evaporación, la condensación, la precipitación y la recolección.</p>
+        <div class="section">
+            <h2>¿Qué es el Ciclo del Agua?</h2>
+            <p>El ciclo del agua, también conocido como ciclo hidrológico, es el proceso continuo de circulación del agua entre los océanos, la atmósfera y la tierra. Incluye la <span class="highlight">evaporación</span>, la <span class="highlight">condensación</span>, la <span class="highlight">precipitación</span> y la <span class="highlight">recolección</span>.</p>
+            <img src="ciclo-del-agua.jpg" alt="Ciclo del agua" width="400">
+        </div>
 
-        <img src="ciclo-del-agua.jpg" alt="Ciclo del agua" width="500">
-
-        <h2>La Importancia Crucial del Agua</h2>
-        <p>El agua es fundamental para la vida en la Tierra. Es indispensable para la agricultura, la industria, el consumo humano, y la preservación de los ecosistemas. Sin agua, no hay vida.</p>
-
-        <h2>Conservación del Agua</h2>
-        <p>Debemos proteger nuestros recursos hídricos. Acciones como reducir el consumo, evitar la contaminación, y apoyar prácticas agrícolas sostenibles son esenciales.</p>
-
-        <h2>Más Información</h2>
-        <p>Para aprender más sobre el ciclo del agua y su conservación, visita <a href="https://www.nationalgeographic.org/encyclopedia/water-cycle/" target="_blank">National Geographic's Water Cycle Encyclopedia</a>.</p>
+        <div class="section">
+            <h2>La Importancia Crucial del Agua</h2>
+            <p>El agua es fundamental para la vida en la Tierra. Es indispensable para la agricultura, la industria, el consumo humano, y la preservación de los ecosistemas. Sin agua, no hay vida.</p>
+            <h2>Conservación del Agua</h2>
+            <p>Debemos proteger nuestros recursos hídricos. Acciones como reducir el consumo, evitar la contaminación, y apoyar prácticas agrícolas sostenibles son esenciales.</p>
+            <h2>Más Información</h2>
+            <p>Para aprender más sobre el ciclo del agua y su conservación, visita <a href="https://www.nationalgeographic.org/encyclopedia/water-cycle/" target="_blank">National Geographic's Water Cycle Encyclopedia</a>.</p>
+        </div>
     </div>
 </body>
 </html>
