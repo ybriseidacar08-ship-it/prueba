@@ -3,78 +3,76 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>El Camino del Agua - Galería</title>
+    <title>El Camino del Agua - Video</title>
     <style>
         body {
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
             background-color: #f0f8ff; /* Azul cielo muy claro */
-            color: #333;
+            color: #fff;
+            overflow: hidden; /* Para evitar barras de desplazamiento */
         }
 
-        .gallery {
+        .video-background {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+            z-index: -1; /* Coloca el video detrás del contenido */
+        }
+
+        .video-background video {
+            min-width: 100%;
+            min-height: 100%;
+            width: auto;
+            height: auto;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translateX(-50%) translateY(-50%);
+        }
+
+        .content {
+            position: relative;
+            z-index: 1;
             display: flex;
-            flex-wrap: wrap;
+            flex-direction: column;
             justify-content: center;
+            align-items: center;
+            height: 100vh;
+            text-align: center;
             padding: 20px;
         }
 
-        .card {
-            width: 300px;
-            margin: 20px;
-            border-radius: 8px;
-            overflow: hidden;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            background-color: white;
-        }
-
-        .card img {
-            width: 100%;
-            height: 200px;
-            object-fit: cover;
-        }
-
-        .card-content {
-            padding: 15px;
-        }
-
-        .card-title {
-            font-size: 1.2em;
+        .main-title {
+            font-size: 3em;
             font-weight: bold;
-            margin-bottom: 10px;
+            margin-bottom: 20px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
         }
 
-        .card-description {
-            font-size: 1em;
-            color: #666;
+        .description {
+            font-size: 1.2em;
+            max-width: 800px;
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
         }
     </style>
 </head>
 <body>
-    <h1>Galería del Camino del Agua</h1>
-    <div class="gallery">
-        <div class="card">
-            <img src="URL_DE_LA_IMAGEN_1" alt="Imagen 1">
-            <div class="card-content">
-                <div class="card-title">Título de la Imagen 1</div>
-                <div class="card-description">Descripción de la imagen 1.</div>
-            </div>
-        </div>
-        <div class="card">
-            <img src="URL_DE_LA_IMAGEN_2" alt="Imagen 2">
-            <div class="card-content">
-                <div class="card-title">Título de la Imagen 2</div>
-                <div class="card-description">Descripción de la imagen 2.</div>
-            </div>
-        </div>
-        <div class="card">
-            <img src="URL_DE_LA_IMAGEN_3" alt="Imagen 3">
-            <div class="card-content">
-                <div class="card-title">Título de la Imagen 3</div>
-                <div class="card-description">Descripción de la imagen 3.</div>
-            </div>
-        </div>
+    <div class="video-background">
+        <video autoplay loop muted>
+            <source src="URL_DEL_VIDEO" type="video/mp4">
+            Tu navegador no soporta videos HTML5.
+        </video>
+    </div>
+    <div class="content">
+        <h1 class="main-title">El Camino del Agua</h1>
+        <p class="description">
+            Sumérgete en la belleza y la importancia del agua con este video impresionante.
+        </p>
     </div>
 </body>
 </html>
