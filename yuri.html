@@ -7,123 +7,45 @@
     <style>
         body {
             font-family: Arial, sans-serif;
-            background-color: #f0f8ff; /* Azul cielo muy claro */
             margin: 0;
             padding: 0;
+            background-color: #f0f8ff; /* Azul cielo muy claro */
+            color: #333;
+        }
+
+        .hero-image {
+            background-image: url('URL_DE_TU_IMAGEN'); /* Reemplaza con la URL de tu imagen */
+            height: 100vh;
+            background-size: cover;
+            background-position: center;
             display: flex;
             flex-direction: column;
+            justify-content: center;
             align-items: center;
-        }
-
-        #titulo {
-            font-size: 2em;
-            color: #4682B4; /* Azul acero */
-            margin: 20px 0;
-            white-space: nowrap;
-            overflow: hidden;
-            animation: moverTitulo 10s linear infinite;
-        }
-
-        @keyframes moverTitulo {
-            0% {
-                transform: translateX(100%);
-            }
-            100% {
-                transform: translateX(-100%);
-            }
-        }
-
-        table {
-            width: 80%;
-            margin: 20px 0;
-            border-collapse: collapse;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra suave */
-            background-color: #FFFFFF; /* Fondo blanco para las tablas */
-        }
-
-        th, td {
-            padding: 12px 15px;
-            text-align: left;
-            border-bottom: 1px solid #B0E2FF; /* Azul cielo claro para las líneas de la tabla */
-        }
-
-        th {
-            background-color: #ADD8E6; /* Azul claro para el encabezado */
+            text-align: center;
             color: white;
         }
 
-        tr:hover {
-            background-color: #E6F7FF; /* Azul muy claro al pasar el ratón */
+        .hero-text {
+            font-size: 2em;
+            font-weight: bold;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        }
+
+        .hero-description {
+            font-size: 1.2em;
+            max-width: 600px;
+            margin-top: 20px;
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
         }
     </style>
 </head>
 <body>
-    <h1 id="titulo">El Camino del Agua</h1>
-
-    <table>
-        <thead>
-            <tr>
-                <th>Encabezado 1</th>
-                <th>Encabezado 2</th>
-                <th>Encabezado 3</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr>
-                <td>Dato 1</td>
-                <td>Dato 2</td>
-                <td>Dato 3</td>
-            </tr>
-            <tr>
-                <td>Dato 4</td>
-                <td>Dato 5</td>
-                <td>Dato 6</td>
-            </tr>
-        </tbody>
-    </table>
-
-    <table>
-        <thead>
-            <tr>
-                <th>Encabezado A</th>
-                <th>Encabezado B</th>
-                <th>Encabezado C</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr>
-                <td>Dato A</td>
-                <td>Dato B</td>
-                <td>Dato C</td>
-            </tr>
-            <tr>
-                <td>Dato D</td>
-                <td>Dato E</td>
-                <td>Dato F</td>
-            </tr>
-        </tbody>
-    </table>
-
-    <table>
-        <thead>
-            <tr>
-                <th>Encabezado X</th>
-                <th>Encabezado Y</th>
-                <th>Encabezado Z</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr>
-                <td>Dato X</td>
-                <td>Dato Y</td>
-                <td>Dato Z</td>
-            </tr>
-            <tr>
-                <td>Dato W</td>
-                <td>Dato U</td>
-                <td>Dato V</td>
-            </tr>
-        </tbody>
-    </table>
+    <div class="hero-image">
+        <div class="hero-text">El Camino del Agua</div>
+        <div class="hero-description">
+            Una descripción fascinante sobre la importancia del agua y su camino a través de la naturaleza.
+        </div>
+    </div>
 </body>
 </html>
