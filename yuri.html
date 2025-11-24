@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>El Camino del Agua</title>
+    <title>El Camino del Agua - Galería</title>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -13,38 +13,67 @@
             color: #333;
         }
 
-        .hero-image {
-            background-image: url('URL_DE_TU_IMAGEN'); /* Reemplaza con la URL de tu imagen */
-            height: 100vh;
-            background-size: cover;
-            background-position: center;
+        .gallery {
             display: flex;
-            flex-direction: column;
+            flex-wrap: wrap;
             justify-content: center;
-            align-items: center;
-            text-align: center;
-            color: white;
+            padding: 20px;
         }
 
-        .hero-text {
-            font-size: 2em;
-            font-weight: bold;
-            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        .card {
+            width: 300px;
+            margin: 20px;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            background-color: white;
         }
 
-        .hero-description {
+        .card img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+
+        .card-content {
+            padding: 15px;
+        }
+
+        .card-title {
             font-size: 1.2em;
-            max-width: 600px;
-            margin-top: 20px;
-            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+        .card-description {
+            font-size: 1em;
+            color: #666;
         }
     </style>
 </head>
 <body>
-    <div class="hero-image">
-        <div class="hero-text">El Camino del Agua</div>
-        <div class="hero-description">
-            Una descripción fascinante sobre la importancia del agua y su camino a través de la naturaleza.
+    <h1>Galería del Camino del Agua</h1>
+    <div class="gallery">
+        <div class="card">
+            <img src="URL_DE_LA_IMAGEN_1" alt="Imagen 1">
+            <div class="card-content">
+                <div class="card-title">Título de la Imagen 1</div>
+                <div class="card-description">Descripción de la imagen 1.</div>
+            </div>
+        </div>
+        <div class="card">
+            <img src="URL_DE_LA_IMAGEN_2" alt="Imagen 2">
+            <div class="card-content">
+                <div class="card-title">Título de la Imagen 2</div>
+                <div class="card-description">Descripción de la imagen 2.</div>
+            </div>
+        </div>
+        <div class="card">
+            <img src="URL_DE_LA_IMAGEN_3" alt="Imagen 3">
+            <div class="card-content">
+                <div class="card-title">Título de la Imagen 3</div>
+                <div class="card-description">Descripción de la imagen 3.</div>
+            </div>
         </div>
     </div>
 </body>
