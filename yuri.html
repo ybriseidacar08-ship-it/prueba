@@ -1,4 +1,4 @@
- <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="es">
 <head>
     <meta charset="UTF-8">
@@ -6,41 +6,68 @@
     <title>El Camino del Agua</title>
     <style>
         body {
-            font-family: sans-serif;
-            margin: 20px;
-            background-color: #f0f8ff; /* Light blue background */
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background: #e0f2f7; /* Fondo celeste muy claro */
+            /*  Puedes usar una imagen de fondo sutil  */
+            /* background-image: url('olas-suaves.jpg'); */
+            background-size: cover;
+            background-repeat: no-repeat;
+            color: #333;
+            line-height: 1.6;
         }
+
+        .container {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            background: rgba(255, 255, 255, 0.8); /* Fondo blanco semi-transparente */
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
         h1, h2 {
-            color: #0077cc; /* Blue color for headings */
+            color: #0056b3; /* Azul más oscuro para los títulos */
+            text-align: center;
         }
+
         img {
             max-width: 100%;
             height: auto;
-            border: 1px solid #ddd;
-            border-radius: 4px;
-            padding: 5px;
+            border-radius: 8px;
+            display: block; /* Centrar la imagen */
+            margin: 20px auto;
         }
-        p {
-            line-height: 1.6;
+
+        a {
+            color: #007bff; /* Azul para los enlaces */
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
         }
     </style>
 </head>
 <body>
-    <h1>El Camino del Agua</h1>
-    <p>Esta página explora la importancia vital del agua y su recorrido esencial a través de la naturaleza.</p>
+    <div class="container">
+        <h1>El Camino del Agua</h1>
+        <p>Esta página explora la importancia vital del agua y su recorrido esencial a través de la naturaleza.</p>
 
-    <h2>¿Qué es el Ciclo del Agua?</h2>
-    <p>El ciclo del agua, también conocido como ciclo hidrológico, es el proceso continuo de circulación del agua entre los océanos, la atmósfera y la tierra.  Incluye la evaporación, la condensación, la precipitación y la recolección.</p>
+        <h2>¿Qué es el Ciclo del Agua?</h2>
+        <p>El ciclo del agua, también conocido como ciclo hidrológico, es el proceso continuo de circulación del agua entre los océanos, la atmósfera y la tierra. Incluye la evaporación, la condensación, la precipitación y la recolección.</p>
 
-    <img src="ciclo-del-agua.jpg" alt="Ciclo del agua" width="500">
+        <img src="ciclo-del-agua.jpg" alt="Ciclo del agua" width="500">
 
-    <h2>La Importancia Crucial del Agua</h2>
-    <p>El agua es fundamental para la vida en la Tierra. Es indispensable para la agricultura, la industria, el consumo humano, y la preservación de los ecosistemas. Sin agua, no hay vida.</p>
+        <h2>La Importancia Crucial del Agua</h2>
+        <p>El agua es fundamental para la vida en la Tierra. Es indispensable para la agricultura, la industria, el consumo humano, y la preservación de los ecosistemas. Sin agua, no hay vida.</p>
 
-    <h2>Conservación del Agua</h2>
-    <p>Debemos proteger nuestros recursos hídricos.  Acciones como reducir el consumo, evitar la contaminación, y apoyar prácticas agrícolas sostenibles son esenciales.</p>
+        <h2>Conservación del Agua</h2>
+        <p>Debemos proteger nuestros recursos hídricos. Acciones como reducir el consumo, evitar la contaminación, y apoyar prácticas agrícolas sostenibles son esenciales.</p>
 
-    <h2>Más Información</h2>
-    <p>Para aprender más sobre el ciclo del agua y su conservación, visita <a href="https://www.nationalgeographic.org/encyclopedia/water-cycle/" target="_blank">National Geographic's Water Cycle Encyclopedia</a>.</p>
+        <h2>Más Información</h2>
+        <p>Para aprender más sobre el ciclo del agua y su conservación, visita <a href="https://www.nationalgeographic.org/encyclopedia/water-cycle/" target="_blank">National Geographic's Water Cycle Encyclopedia</a>.</p>
+    </div>
 </body>
 </html>
